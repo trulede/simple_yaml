@@ -24,16 +24,15 @@ typedef struct SimpleYamlNode  {
 } SimpleYamlNode;
 
 
-SimpleYamlNode* simple_yaml_create_node(const char* name, SimpleYamlNode* parent);
+SimpleYamlNode* simple_yaml_create_node(SimpleYamlNode* parent);
+SimpleYamlNode* simple_yaml_create_mapping(SimpleYamlNode* node);
+SimpleYamlNode* simple_yaml_create_sequence(SimpleYamlNode* node);
+void simple_yaml_set_scalar(SimpleYamlNode* node, const char* value);
 void simple_yaml_destroy_node(SimpleYamlNode* node);
 
-void simple_yaml_set_scalar(SimpleYamlNode* node, const char* value);
-void simple_yaml_set_mapping(SimpleYamlNode* node);
-void simple_yaml_set_sequence(SimpleYamlNode* node);
+HashList* simple_yaml_parse_file(const char* filename, HashList* doc_list);
 
 SimpleYamlNode* simple_yaml_find_node(SimpleYamlNode* parent, const char* path);
 int simple_yaml_get_value_as_bool(SimpleYamlNode* node, bool* value);
 int simple_yaml_get_value_as_int(SimpleYamlNode* node, int32_t* value);
 int simple_yaml_get_value_as_uint(SimpleYamlNode* node, uint32_t* value);
-
-HashList* simple_yaml_parse_file(const char* filename, HashList* doc_list);
