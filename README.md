@@ -26,10 +26,10 @@ Document 1
 Helpful learning material and examples:
 
 * https://www.wpsoftware.net/andrew/
-*https://www.wpsoftware.net/andrew/pages/libyaml.html
+* https://www.wpsoftware.net/andrew/pages/libyaml.html
 
 #### Tyler Barrus
 
 Useful C Libraries. No point reinventing the wheel.
 
-* https://github.com/barrusthttps://github.com/barrust
+* https://github.com/barrust
