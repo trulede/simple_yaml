@@ -8,7 +8,7 @@ within the parsed Node Tree.
 $ git clone https://github.com/trulede/simple_yaml.git
 $ cd simple_yaml
 $ make
-./simple_yaml
+$ ./simple_yaml
 Document 0
   kind = Pod
   name = static-web
